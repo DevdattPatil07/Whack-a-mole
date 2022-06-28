@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500&family=Oleo+Script+Swash+Caps&family=Permanent+Marker&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #98BCf4;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    margin: auto;
+    font-family: 'Permanent Marker', cursive;
+    transform:rotate(-50deg);
+    -ms-transform:rotate(-50deg); /* IE 9 */
+    -webkit-transform:rotate(-50deg); /* Opera, Chrome, and Safari */
+    z-index: -1;
+}
+.game-container{
+    width: 600px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px 5px rgba(100,100,100,0.6);
+    border-radius: 5px;
+}
+.game-content{
+    display: flex;
+    width: 100%;
+}
+.score{
+    background-color: rgb(252, 178, 178);
+    padding: 1.3rem;
+    font-size: 1.2rem;
+    width: 20%;
+    text-align: center;
+    font-family: 'Oleo Script Swash Caps', cursive;
+}
+.score1{
+    border-radius: 5px 0 0 5px;
+}
+.score2{
+    border-radius: 0 5px 5px 0;
+}
+button{
+    background-color: #2650fa;
+    color: #fff;
+    border: none;
+    display: block;
+    width: 60%;
+    font-size: 1.2rem;
+    padding: 1.3rem;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+}
+.game{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+}
+.hole{
+    flex: 1 0 33.33%;
+    overflow: hidden;
+    position: relative;
+}
+.hole:after{
+    display: block;
+    background: url('images/dirt.png') bottom center no-repeat;
+    background-size: contain;
+    content:'';
+    width:100%;
+    height:90px;
+    position: absolute;
+    z-index: 2;
+    bottom: -20px;
+}
+.mole{
+    background: url('images/mole.png') bottom center no-repeat;
+    position: absolute;
+    background-size: 80%;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+    z-index: 2;
+}
+.hole.up .mole{
+    top:0;
+}
