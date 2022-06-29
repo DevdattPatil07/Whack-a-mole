@@ -82,7 +82,7 @@ button{
     height:90px;
     position: absolute;
     z-index: 2;
-    bottom: -30px;
+    bottom: -15%;
 }
 .mole{
     background: url('images/mole.png') bottom center no-repeat;
@@ -113,16 +113,19 @@ p{
         transform: none;
     }
     .game-container{
-        max-width: 500px;
+        max-width: 360px;
     }
     .game{
-        max-width: 500px;
-        max-height: 500px;
+        max-width: 360px;
+        max-height: 360px;
     }
     .hole{
         flex: 0 1 33.33%;
         overflow: hidden;
         position: relative;
+    }
+    .hole:after{
+        height: 40%;
     }
 
 }
