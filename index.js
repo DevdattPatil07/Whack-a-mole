@@ -1,6 +1,5 @@
 const holes=document.querySelectorAll('.hole');
 const scoreBoard=document.querySelectorAll('.score');
-console.log(scoreBoard);
 const moles=document.querySelectorAll('.mole');
 const btnxyz=document.querySelector('.btn');
 
@@ -43,10 +42,11 @@ function startGame(){
     score=0;
     peep();
     seconds=15;
-    setTimeout(()=> timeUp=true,15000) //show random mole for 60sec(timeUp will be true for 60sec)
+    setTimeout(()=> timeUp=true,15000) //show random mole for 15sec(timeUp will be true for 15sec)
     interval=setInterval(updateCount,1000);
 }
 
+//counter function
 function updateCount(){
     btnxyz.innerHTML=`${seconds}`;
     if(seconds===1){
@@ -58,6 +58,7 @@ function updateCount(){
 
 
 function wack(e){
+    console.log(e);
     if(!e.isTrusted) return;
     score++;
     this.parentNode.classList.remove('up');
@@ -65,15 +66,3 @@ function wack(e){
 }
 
 moles.forEach(mole=>mole.addEventListener('click',wack));
-
-// function start(d){
-    // if (d.interval){
-        // clearInterval(d.interval);
-        // d.innerHTML='Start';
-    // } else {
-        // d.interval=setInterval(function(){
-        //   refresh here
-        // },10000);
-        // d.innerHTML='Stop';
-    // }
-// }

@@ -29,6 +29,7 @@ h1{
     justify-content: center;
     box-shadow: 0 0 10px 5px rgba(100,100,100,0.6);
     border-radius: 5px;
+    cursor: url(images/Hammer_cursor.png),auto;
 }
 .game-content{
     display: flex;
@@ -81,7 +82,7 @@ button{
     height:90px;
     position: absolute;
     z-index: 2;
-    bottom: -20px;
+    bottom: -30px;
 }
 .mole{
     background: url('images/mole.png') bottom center no-repeat;
@@ -95,4 +96,33 @@ button{
 }
 .hole.up .mole{
     top:0;
+}
+p{
+    position: fixed;
+    bottom: -13px;
+    right: 3px;
+    font-size: 15px;
+}
+
+@media(max-width:667px){
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    h1{
+        transform: none;
+    }
+    .game-container{
+        max-width: 500px;
+    }
+    .game{
+        max-width: 500px;
+        max-height: 500px;
+    }
+    .hole{
+        flex: 0 1 33.33%;
+        overflow: hidden;
+        position: relative;
+    }
+
 }
